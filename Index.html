@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ed Batista Júnior | IFBaiano 2025</title>
+    <style>
+        /* ---------- Reset básico ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ---------- Variáveis de cor (identidade IFBaiano) ---------- */
+        :root {
+            --verde-if: #1f7a3a;
+            --verde-escuro: #14532d;
+            --verde-claro: #e6f4ea;
+            --dourado: #d4af37;
+            --cinza-texto: #333;
+            --branco: #ffffff;
+            --sombra: rgba(0, 0, 0, 0.15);
+        }
+
+        /* ---------- Corpo da página ---------- */
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, var(--verde-claro) 0%, #c8e6c9 100%);
+            color: var(--cinza-texto);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            line-height: 1.6;
+        }
+
+        /* ---------- Cartão principal ---------- */
+        .card {
+            background: var(--branco);
+            max-width: 720px;
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px var(--sombra);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            animation: aparecer 0.8s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        /* ---------- Cabeçalho ---------- */
+        header {
+            background: linear-gradient(135deg, var(--verde-if), var(--verde-escuro));
+            color: var(--branco);
+            text-align: center;
+            padding: 40px 24px 32px;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--dourado);
+        }
+
+        /* ---------- LOGO IFBAIANO (substitui o avatar) ---------- */
+        .logo-ifbaiano {
+            width: 140px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-ifbaiano:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        header p.subtitulo {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* ---------- Conteúdo ---------- */
+        main {
+            padding: 32px 32px 12px;
+        }
+
+        section {
+            margin-bottom: 26px;
+        }
+
+        section h2 {
+            font-size: 1.15rem;
+            color: var(--verde-if);
+            border-left: 4px solid var(--dourado);
+            padding-left: 10px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ---------- Lista de informações ---------- */
+        ul.info {
+            list-style: none;
+        }
+
+        ul.info li {
+            background: var(--verde-claro);
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.3s ease;
+        }
+
+        ul.info li:hover {
+            background: #d0ecd6;
+        }
+
+        ul.info li span.rotulo {
+            font-weight: 600;
+            color: var(--verde-escuro);
+            min-width: 110px;
+            display: inline-block;
+        }
+
+        /* ---------- Destaque da disciplina ---------- */
+        .destaque {
+            background: linear-gradient(135deg, var(--verde-escuro), var(--verde-if));
+            color: var(--branco);
+            padding: 18px 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        .destaque strong {
+            color: var(--dourado);
+        }
+
+        /* ---------- Rodapé ---------- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--verde-claro);
+            color: var(--verde-escuro);
+            font-size: 0.85rem;
+            border-top: 1px solid #c8e6c9;
+        }
+
+        /* ---------- Animação ---------- */
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ---------- Responsividade ---------- */
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.4rem; }
+            main { padding: 24px 18px 8px; }
+            .logo-ifbaiano { width: 110px; }
+            ul.info li span.rotulo { min-width: 90px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <!-- Logo oficial do IF Baiano -->
+            <img
+                src="https://ifbaiano.edu.br/portal/wp-content/uploads/2024/11/marca-if-baiano-completa.png"
+                alt="Logo do Instituto Federal Baiano (IFBaiano)"
+                class="logo-ifbaiano"
+            >
+            <h1>Ed Batista Júnior</h1>
+            <p class="subtitulo">Estudante do IFBaiano · 2025</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Sobre o Aluno</h2>
+                <ul class="info">
+                    <li><span class="rotulo">Nome:</span> Ed Batista Júnior</li>
+                    <li><span class="rotulo">Curso:</span> Técnico em Redes de Computadores</li>
+                    <li><span class="rotulo">Ano:</span> 2025</li>
+                    <li><span class="rotulo">Instituição:</span> Instituto Federal Baiano (IFBaiano)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Disciplina</h2>
+                <div class="destaque">
+                    <p><strong>Computação em Nuvem e Virtualização</strong></p>
+                    <p>Avaliação Virtual 2</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Sobre a Avaliação</h2>
+                <p style="font-size: 0.97rem;">
+                    Esta página foi desenvolvida como parte da avaliação da disciplina
+                    de <strong>Computação em Nuvem e Virtualização</strong>, com o objetivo
+                    de aplicar, na prática, os conceitos de versionamento com Git e GitHub,
+                    além da publicação de conteúdo estático na web — habilidades essenciais
+                    para o profissional da área de Redes de Computadores.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            © 2025 · Ed Batista Júnior · IFBaiano · Técnico em Redes de Computadores
+        </footer>
+    </div>
+</body>
+</html>
